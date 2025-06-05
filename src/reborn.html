@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="battle.css">
+  <title>reborn</title>
+</head>
+<body>
+  <div class="container-reborn">
+    <div id="king-msg"></div>
+  </div>
+  <script>
+    var text = "おお　ゆうしゃよ。しんでしまうとはなにごとだ！そなたにふたたびいのちをあたえよう！　さあ　もういちどたたかってくるのだ！"
+    const textContainer = document.getElementById('king-msg');
+    displayText(text, textContainer, function () {
+        setTimeout(window.location.replace("./battle.html"), 10000);
+      });
+
+    function displayText(text, container, callback) {
+      textContainer.innerText = "";
+      let index = 0;
+      const displayInterval = 100; // 文字を表示する間隔（ミリ秒）
+
+      const displayNextCharacter = () => {
+        if (index < text.length) {
+          container.textContent += text[index];
+          index++;
+          setTimeout(displayNextCharacter, displayInterval); // 次の文字を表示するまでの待ち時間を設定
+        } else {
+          // テキスト表示が完了した後にコールバック関数を実行
+          if (callback) {
+            callback();
+          }
+        }
+      };
+
+      displayNextCharacter(); // 初回の文字表示を開始
+      }
+  </script>
+</body>
+</html>
