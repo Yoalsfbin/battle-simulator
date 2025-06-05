@@ -357,7 +357,7 @@ async function displayTextAndWait(text, container) {
 function generateEnemies(enemiesCount) {
   // 敵のパラメータ
   var enemyParams = [
-    { hp: 10, name: "アメーバ", minAttack: 3, maxAttack: 8, image: '../img/enemy/enemy1.PNG' }, // スライムのパラメータ
+    { hp: 10, name: "アメーバ", minAttack: 3, maxAttack: 8, image: '../img/enemy/enemy1.PNG' }, 
     { hp: 20, name: "いたずらねずみ", minAttack: 5, maxAttack: 10, image: '../img/enemy/enemy2.PNG' }, 
     { hp: 25, name: "おばけどり", minAttack: 8, maxAttack: 15, image: '../img/enemy/enemy3.PNG' } 
   ];
