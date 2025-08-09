@@ -136,7 +136,7 @@ async function enemyButtonClickHandler(event) {
         } else {
           var result = ""
           if (enemiesFlg) {
-            stopAudio("battle_bgm");
+            // stopAudio("battle_bgm");
             result = "まもののむれをやっつけた！"
             await displayTextAndWait(result, textContainer);
           } 
@@ -180,7 +180,7 @@ async function processBattle(kind) {
     if (bossFlg) {
       if (Math.random() < 1 / 3) {
         damage = 40;
-        battleLog = enemyName + "はほのおをはいた！！" + hero.name + "は" + damage + "のダメージをうけた！";
+        battleLog = enemyName + "はほのおをはいた！！あつい！！" + hero.name + "は" + damage + "のダメージをうけた！";
       } else {
         battleLog = enemyName + "のこうげき！" + hero.name + "は" + damage + "のダメージをうけた！";
       }
@@ -203,10 +203,10 @@ async function processBattle(kind) {
     hero.hp -= damage;
     if (hero.hp < 1) {
       dyingStatus()
-      stopAudio("battle_bgm")
+      // stopAudio("battle_bgm")
       document.getElementById("hp1").innerText = 0;
       await displayTextAndWait(hero.name + "はしんでしまった...", textContainer);
-      setTimeout(window.location.replace("./reborn.html"), 15000);
+      setTimeout(window.location.replace("./reborn.html"), 13000);
       return;
     }
     document.getElementById("hp1").innerText = hero.hp;
@@ -259,6 +259,7 @@ function selectCommand(command) {
       // 1/4の確率で逃走成功
       if (Math.random() < 0.25) {
         // 逃走成功の場合、ページをリロードして戦闘から脱出
+        escapeLog += "うまくにげきれた！";
         displayText(escapeLog, textContainer, function () {
           setTimeout(location.reload(), 1000); 
         });
