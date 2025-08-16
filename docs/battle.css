@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+body {
+  font-family: 'DotGothic16', sans-serif;
+  background-color: black;
+}
+
+.status {
+  width: 140px;
+  background-color: black;
+  border: 2px solid white;
+  margin-bottom: 50px;
+}
+
+.hp {
+  color: white;
+  font-size: 30px;
+}
+
+#hp1 {
+  display: inline;
+}
+
+#mp1 {
+  display: inline;
+}
+
+.enemies {
+  display: flex;
+  width: 750px;
+  justify-content: center;
+}
+
+#msg {
+  color: white;
+  font-size: 30px;
+  height: 200px;
+  width: auto;
+  /* コンテナーの幅を自動調整 */
+  max-width: 750px;
+  /* コンテナーの最大幅 */
+  background-color: black;
+  border: 2px solid white;
+}
+
+/* モーダルのスタイル */
+.modal {
+  display: none;
+  height: 100%;
+  overflow: auto;
+}
+
+#commandModal {
+  width: 250px;
+  height: 500px;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 28%;
+}
+
+#enemyModal {
+  width: 280px;
+  position: fixed;
+  z-index: 5;
+  left: 235px;
+  top: 28%;
+}
+
+#magicModal {
+  width: 280px;
+  position: fixed;
+  z-index: 5;
+  left: 235px;
+  top: 55%;
+}
+
+/* モーダルの中身 */
+.modal-content {
+  color: white;
+  background-color: black;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid white;
+  width: 80%;
+  font-size: 20px;
+}
+
+/* 閉じるボタン */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content button, .start-button {
+  display: block;
+  /* ボタンを縦並びにする */
+  width: 100%;
+  /* ボタンの幅を100%にする */
+  margin-bottom: 10px;
+  /* ボタンの下に余白を追加する */
+  background-color: black;
+  /* ボタンの背景色 */
+  color: white;
+  /* ボタンのテキスト色 */
+  padding: 14px 20px;
+  /* ボタンのパディング */
+  border: none;
+  /* ボタンの枠線をなくす */
+  border-radius: 4px;
+  /* ボタンの角を丸くする */
+  cursor: pointer;
+  /* ボタンのカーソルをポインターにする */
+  font-size: 20px;
+  font-family: 'DotGothic16', sans-serif;
+}
+
+.modal-content button:hover ,.start-button:hover {
+  background-color: white;
+  color: black;
+} 
+
+/* ボタン内の▶︎のスタイル */
+.modal-content button::before , .start-button::before {
+  content: "▶︎";
+  /* ボタン内に表示するコンテンツを設定 */
+  /* position: absolute; */
+  /* コンテンツの位置を絶対位置に設定 */
+  left: 10px;
+  /* 左からの位置を設定 */
+  top: 50%;
+  /* 上下の中央位置に設定 */
+  transform: translateY(-50%);
+  /* 上下中央揃え */
+  opacity: 0;
+  /* デフォルトは非表示 */
+  transition: opacity 0.3s ease;
+  /* ホバー時のアニメーション設定 */
+}
+
+/* ボタンをホバーしたときのスタイル */
+.modal-content button:hover::before , .start-button:hover::before {
+  opacity: 1;
+  /* ホバー時に▶︎を表示 */
+  animation: blink 0.3s infinite alternate;
+}
+
+/* 点滅アニメーション */
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.container-reborn {
+  position: relative;
+}
+
+#king {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 700px;
+  width: auto;
+}
+
+#king-msg {
+  position: absolute;
+  top: 407px;
+  left: 98px;
+  z-index: 1;
+  color: white;
+  font-size: 30px;
+  height: 280px;
+  width: 640px;
+  /* コンテナーの幅を自動調整 */
+  max-width: 640px;
+  /* コンテナーの最大幅 */
+  background-color: black;
+  border: 5px solid white;
+}
+
+.title-window {
+  width: 140px;
+  background-color: black;
+  border: 2px solid white;
+  margin-bottom: 50px;
+  position: absolute;
+  top: 100px;
+  left: 150px;
+  width: 550px;
+  height: 300px;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-window h1 {
+  color: white;
+  font-size: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.start-button {
+  display: block;
+  width: max-content;
+  margin: 0 auto;
+  text-decoration: none;
+  font-size: 30px;
+}
