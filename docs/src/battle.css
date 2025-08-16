@@ -101,7 +101,7 @@ body {
   cursor: pointer;
 }
 
-.modal-content button {
+.modal-content button, .start-button {
   display: block;
   /* ボタンを縦並びにする */
   width: 100%;
@@ -124,13 +124,13 @@ body {
   font-family: 'DotGothic16', sans-serif;
 }
 
-.modal-content button:hover {
+.modal-content button:hover ,.start-button:hover {
   background-color: white;
   color: black;
 } 
 
 /* ボタン内の▶︎のスタイル */
-.modal-content button::before {
+.modal-content button::before , .start-button::before {
   content: "▶︎";
   /* ボタン内に表示するコンテンツを設定 */
   /* position: absolute; */
@@ -148,7 +148,7 @@ body {
 }
 
 /* ボタンをホバーしたときのスタイル */
-.modal-content button:hover::before {
+.modal-content button:hover::before , .start-button:hover::before {
   opacity: 1;
   /* ホバー時に▶︎を表示 */
   animation: blink 0.3s infinite alternate;
@@ -190,4 +190,38 @@ body {
   /* コンテナーの最大幅 */
   background-color: black;
   border: 5px solid white;
+}
+
+.title-window {
+  width: 140px;
+  background-color: black;
+  border: 2px solid white;
+  margin-bottom: 50px;
+  position: absolute;
+  top: 100px;
+  left: 150px;
+  width: 550px;
+  height: 300px;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-window h1 {
+  color: white;
+  font-size: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.start-button {
+  display: block;
+  width: max-content;
+  margin: 0 auto;
+  text-decoration: none;
+  font-size: 30px;
 }
