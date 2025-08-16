@@ -358,9 +358,9 @@ async function displayTextAndWait(text, container) {
 function generateEnemies(enemiesCount) {
   // 敵のパラメータ
   var enemyParams = [
-    { hp: 10, name: "アメーバ", minAttack: 3, maxAttack: 8, image: '../docs/img/enemy/enemy1.PNG' }, 
-    { hp: 20, name: "いたずらねずみ", minAttack: 5, maxAttack: 10, image: '../docs/img/enemy/enemy2.PNG' }, 
-    { hp: 25, name: "おばけどり", minAttack: 8, maxAttack: 15, image: '../docs/img/enemy/enemy3.PNG' } 
+    { hp: 10, name: "アメーバ", minAttack: 3, maxAttack: 8, image: '../docs/img/enemy1.PNG' }, 
+    { hp: 20, name: "いたずらねずみ", minAttack: 5, maxAttack: 10, image: '../docs/img/enemy2.PNG' }, 
+    { hp: 25, name: "おばけどり", minAttack: 8, maxAttack: 15, image: '../docs/img/enemy3.PNG' } 
   ];
 
   // enemies要素を取得
@@ -421,7 +421,7 @@ function generateEnemies(enemiesCount) {
 function generateBossEnemies() {
   // 敵のパラメータ
   var enemyParams = [
-    { hp: 120, name: "ドラゴン", minAttack: 20, maxAttack: 30, image: '../docs/img/enemy/boss.PNG' }, 
+    { hp: 120, name: "ドラゴン", minAttack: 20, maxAttack: 30, image: '../docs/img/boss.PNG' }, 
   ];
 
   // enemies要素を取得
