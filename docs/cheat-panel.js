@@ -16,13 +16,12 @@ function initCheatPanel(panelId = "cheatPanel") {
     // パネル表示/非表示切り替え
     function toggleCheatPanel() {
         const panel = document.getElementById(panelId);
-        if (!panel) return;
+        if (!panel) {
+            cheatPanel(hero);
+            panel = document.getElementById(panelId);
+        };
         panel.style.display = panel.style.display === "none" ? "block" : "none";
     }
-
-
-    // ページ読み込み時にチートパネル生成
-    window.addEventListener("load", () => cheatPanel(window.hero));
 }
 
 
