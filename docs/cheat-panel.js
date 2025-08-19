@@ -252,7 +252,7 @@ class Command {
     commandDetectionToExecute(e, callback) {
         const key = e.key;
 
-        if (key.toLocaleLowerCase() === this.#command[this.#commandIndex].toLocaleLowerCase()) {
+        if (key.toLowerCase() === this.#command[this.#commandIndex].toLowerCase()) {
             this.#commandIndex++;
             if(this.#commandIndex === this.#command.length) {
                 this.#commandIndex = 0;
