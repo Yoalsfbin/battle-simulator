@@ -118,7 +118,7 @@ function cheatPanel(hero) {
             </div>
             <div class="cheat-panel_row">
                 <label>HP</label>
-                <input id="cheatHp" type="number"min="1"/>
+                <input id="cheatHp" type="number" min="1"/>
                 <button id="setHp">設定</button>
             </div>
             <div class="cheat-panel_row">
