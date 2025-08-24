@@ -113,22 +113,22 @@ function cheatPanel(hero) {
             </div>
             <div class="cheat-panel_row">
                 <label>MaxHP</label>
-                <input id="cheatMaxHp" type="number"/>
+                <input id="cheatMaxHp" type="number" min="1"/>
                 <button id="setHp">設定</button>
             </div>
             <div class="cheat-panel_row">
                 <label>HP</label>
-                <input id="cheatHp" type="number"/>
+                <input id="cheatHp" type="number" min="1"/>
                 <button id="setHp">設定</button>
             </div>
             <div class="cheat-panel_row">
                 <label>MP</label>
-                <input id="cheatMp" type="number" />
+                <input id="cheatMp" type="number" min="0"/>
                 <button id="setMp">設定</button>
                 </div>
             <div class="cheat-panel_row">
                 <label>攻撃力</label>
-                <input id="cheatAtk" type="number" />
+                <input id="cheatAtk" type="number" min="0"/>
                 <button id="setAtk">設定</button>
             </div>
             <div class="cheat-panel_row">
